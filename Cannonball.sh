@@ -16,5 +16,5 @@ echo "Iniciando Metagoofil"
 
 wait 2
 
-python3 ./metagoofil/metagoofil.py -d enti.cat -f output -n 20 -l 200 -t pdf,doc,xls,ppt,docx,csv,pptx,xlsx
+python3 ./metagoofil/metagoofil.py -d $DOMAIN -f $OUTFILE -n 20 -l 200 -t pdf,doc,xls,ppt,docx,csv,pptx,xlsx
 
