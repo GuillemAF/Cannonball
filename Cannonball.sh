@@ -1,6 +1,20 @@
 #!/bin/bash
 
+cat .title.txt
+
 read -p "Input a domain: " DOMAIN
 read -p "Input an output file name: " OUTFILE
 
-theHarvester -d $DOMAIN -b all -f $OUTFILE\_TH & metagoofil -d $DOMAIN -t pdf,csv,doc,xls,ppt,docx,pptx,xlsx -l 200 -n10 -o ./ -f ./$OUTFILE\_MGF & amass enum -d $DOMAIN -o ./$OUTFILE
+echo "Enumeración de SUBDOMINIOS con Amass y TheHarvester:"
+wait 2
+
+
+theHarvester -d $DOMAIN -b all -f $OUTFILE\_TH & amass enum -d $DOMAIN -o ./$OUTFILE
+
+echo "TheHarvester y amass han funcionado correctamente.\n\n"
+echo "Iniciando Metagoofil"
+
+wait 2
+
+python3 ./metagoofil/metagoofil.py -d enti.cat -f output -n 20 -l 200 -t pdf,doc,xls,ppt,docx,csv,pptx,xlsx
+
