@@ -1,0 +1,18 @@
+#!/usr/bin/python3
+import subprocess 
+import json
+
+
+with open("TH_out.json", "r") as j:
+    TheHarvester = json.load(j)
+
+for i in TheHarvester["hosts"]:
+    for e in i:
+        print(e)
+        if e == "*":
+            continue
+        else:
+            subprocess.run(["curl", i], check=True)
+
+
+
