@@ -2,18 +2,24 @@
 Cannonball is a pentest tool used for information gathering and OSINT. It's centered in enterprise security where you'll have to document and download what you find in a very structured way. This tool is a cluster of many local and online OSINT softwares created by other users. What I've made it's just put all of those together.  
 
 ## Installation guide
-To install this package you will need:
- - A linux machine (Kali is recomended because has many of the tools this script use already installed)
- - Github installed
- - TheHarvester installed
- - Amass installed  
+This tool requires a little bit of a "set up". Here are the instructionsi:  
 
 To proceed with the installation you'll have to run this command on your bash shell:
 
 ```bash
 git clone https://github.com/GuillemAF/Cannonball.git
 ```
-also you will have to have TheHarvester and Amass isntalled too. You can do this by typing:
+
+Another thing you have to do to get this program running properly, is to install this github repositories and have them in the same directory ("Cannonball"). Cannonball.sh script is prepeared to launch those programs from that ubication.  
+To do this, you will have to run the following commands:  
+  
+(Make sure that you are in "Cannonball" directory)  
+
+```bash
+git clone https://github.com/drwetter/testssl.sh.git
+git clone https://github.com/santoru/shcheck.git
+```
+also, you will have to have TheHarvester and Amass isntalled too. You can do this by typing:
 
 ```bash
 apt-get install theharvester & apt-get install amass

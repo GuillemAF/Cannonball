@@ -1,1 +1,0 @@
-{"https://dmed-software.com": {"present": {"Referrer-Policy": "no-referrer-when-downgrade"}, "missing": ["X-Frame-Options", "X-Content-Type-Options", "Strict-Transport-Security", "Content-Security-Policy", "Permissions-Policy", "Cross-Origin-Embedder-Policy", "Cross-Origin-Resource-Policy", "Cross-Origin-Opener-Policy"]}}

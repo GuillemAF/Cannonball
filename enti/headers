@@ -1,0 +1,31 @@
+port: 80
+HTTP/1.1 301 Moved Permanently
+Server: nginx
+Date: Fri, 17 Nov 2023 10:11:46 GMT
+Content-Type: text/html
+Content-Length: 162
+Connection: keep-alive
+Location: https://enti.cat/
+
+port: 443
+HTTP/1.1 400 Bad Request
+Server: nginx
+Date: Fri, 17 Nov 2023 10:11:46 GMT
+Content-Type: text/html
+Content-Length: 248
+Connection: close
+
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+HTTP/1.1 302 Moved Temporarily
+Server: sw-cp-server
+Date: Fri, 17 Nov 2023 10:11:46 GMT
+Content-Type: text/html
+Content-Length: 138
+Connection: close
+Location: https://enti.cat:8443/
+
+port: 4443
+port: 6443

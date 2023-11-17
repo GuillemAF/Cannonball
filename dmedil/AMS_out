@@ -1,5 +1,0 @@
-dmed-software.com (FQDN) --> ns_record --> ns2.blacknight.com (FQDN)
-dmed-software.com (FQDN) --> ns_record --> ns1.blacknight.com (FQDN)
-dmed-software.com (FQDN) --> ns_record --> ns4.blacknight.com (FQDN)
-dmed-software.com (FQDN) --> ns_record --> ns3.blacknight.com (FQDN)
-dmed-software.com (FQDN) --> mx_record --> dmedsoftware-com01b.mail.protection.outlook.com (FQDN)
