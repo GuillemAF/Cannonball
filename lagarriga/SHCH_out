@@ -1,0 +1,1 @@
+{"https://lagarriga.cat": {"present": {"X-XSS-Protection": "1;  mode=block", "X-Frame-Options": "sameorigin", "X-Content-Type-Options": "nosniff"}, "missing": ["Strict-Transport-Security", "Content-Security-Policy", "Referrer-Policy", "Permissions-Policy", "Cross-Origin-Embedder-Policy", "Cross-Origin-Resource-Policy", "Cross-Origin-Opener-Policy"]}}

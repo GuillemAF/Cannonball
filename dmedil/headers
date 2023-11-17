@@ -1,0 +1,61 @@
+port: 80
+HTTP/1.1 301 Moved Permanently
+Server: nginx
+Date: Thu, 16 Nov 2023 11:34:52 GMT
+Content-Type: text/html
+Content-Length: 162
+Connection: keep-alive
+Location: https://dmed-software.com/
+
+port: 443
+HTTP/1.1 400 Bad Request
+Server: nginx
+Date: Thu, 16 Nov 2023 11:34:52 GMT
+Content-Type: text/html
+Content-Length: 248
+Connection: close
+
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: *.dmed-software.com
+
+
+port: 80
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+IP: 134.209.233.65
+
+
+port: 80
+HTTP/1.1 403 Forbidden
+Server: nginx
+Date: Thu, 16 Nov 2023 11:35:23 GMT
+Content-Type: text/html
+Content-Length: 343
+Connection: keep-alive
+Vary: Accept-Encoding
+ETag: "62c68653-157"
+
+port: 443
+HTTP/1.1 400 Bad Request
+Server: nginx
+Date: Thu, 16 Nov 2023 11:35:23 GMT
+Content-Type: text/html
+Content-Length: 248
+Connection: close
+
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443

@@ -1,0 +1,757 @@
+Domain: *.lagarriga.cat
+
+
+port: 80
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: actes.lagarriga.cat
+
+
+port: 80
+HTTP/1.1 301 Moved Permanently
+Date: Thu, 16 Nov 2023 10:00:29 GMT
+Server: Apache
+Location: https://actes.lagarriga.cat/
+Content-Type: text/html; charset=iso-8859-1
+
+port: 443
+HTTP/1.1 400 Bad Request
+Date: Thu, 16 Nov 2023 10:00:29 GMT
+Server: Apache
+Content-Length: 362
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: actes.lagarriga.cat:77.226.235.210
+
+
+port: 80
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: aemjaumeoliveras.entitats.lagarriga.cat:ppe.entitats.diba.cat
+
+
+port: 80
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: aemjaumeoliveras.entitats.lagarriga.cat:ppe.entitats.diba.cat.
+
+
+port: 80
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: apeei.entitats.lagarriga.cat:ppe.entitats.diba.cat
+
+
+port: 80
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: apeei.entitats.lagarriga.cat:ppe.entitats.diba.cat.
+
+
+port: 80
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: aulaformacio.eda.lagarriga.cat
+
+
+port: 80
+HTTP/1.1 301 Moved Permanently
+Server: nginx-rc
+Date: Thu, 16 Nov 2023 10:01:00 GMT
+Content-Type: text/html
+Content-Length: 174
+Connection: keep-alive
+Location: https://aulaformacio.eda.lagarriga.cat/
+
+port: 443
+HTTP/1.1 400 Bad Request
+Server: nginx-rc
+Date: Thu, 16 Nov 2023 10:01:00 GMT
+Content-Type: text/html
+Content-Length: 252
+Connection: close
+Strict-Transport-Security: max-age=31536000
+
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: aulaformacio.eda.lagarriga.cat:157.90.227.31
+
+
+port: 80
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: aulaformacio.eda.lagarriga.cat:81.25.125.129
+
+
+port: 80
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: aulaformacio.eda.lagarriga.cat:cm2019120213001.dnssw.net.
+
+
+port: 80
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: canluna.lagarriga.cat
+
+
+port: 80
+HTTP/1.1 200 OK
+Date: Thu, 16 Nov 2023 10:01:34 GMT
+Server: Apache
+Link: <http://canluna.lagarriga.cat/wp-json/>; rel="https://api.w.org/", <http://canluna.lagarriga.cat/>; rel=shortlink
+Upgrade: h2
+Connection: Upgrade
+Content-Type: text/html; charset=UTF-8
+
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: canluna.lagarriga.cat:81.25.125.129
+
+
+port: 80
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: canluna.lagarriga.cat:CM2019120213001.dnssw.net
+
+
+port: 80
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: canluna.lagarriga.cat:CM2019120213001.dnssw.net.
+
+
+port: 80
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: cblagarriga.entitats.lagarriga.cat:ppe.entitats.diba.cat
+
+
+port: 80
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: cblagarriga.entitats.lagarriga.cat:ppe.entitats.diba.cat.
+
+
+port: 80
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: cdh.lagarriga.cat
+
+
+port: 80
+HTTP/1.1 200 OK
+date: Thu, 16 Nov 2023 10:02:04 GMT
+content-type: text/html; charset=UTF-8
+server: Apache
+x-powered-by: PHP/8.1
+cache-control: max-age=3600, public
+x-drupal-dynamic-cache: MISS
+link: <http://cdh.lagarriga.cat/node/4196>; rel="canonical"
+link: <http://cdh.lagarriga.cat/node/4196>; rel="shortlink"
+x-ua-compatible: IE=edge
+content-language: ca
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+permissions-policy: interest-cohort=()
+expires: Sun, 19 Nov 1978 05:00:00 GMT
+last-modified: Mon, 13 Nov 2023 17:08:29 GMT
+etag: "1699895309"
+vary: Cookie,Accept-Encoding
+x-generator: Drupal 9 (https://www.drupal.org)
+x-drupal-cache: HIT
+x-iplb-request-id: 2E1BDA68:E376_BCA58191:0050_6555E89C_35B42:7BD3
+x-iplb-instance: 17097
+
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: cdh.lagarriga.cat:188.165.129.145
+
+
+port: 80
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: cdh.lagarriga.cat:81.25.125.129
+
+
+port: 80
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: cdh.lagarriga.cat:CM2019120213001.dnssw.net
+
+
+port: 80
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: cdh.lagarriga.cat:CM2019120213001.dnssw.net.
+
+
+port: 80
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: deixalleria.lagarriga.cat
+
+
+port: 80
+HTTP/1.1 301 Moved Permanently
+Server: nginx
+Date: Thu, 16 Nov 2023 10:02:36 GMT
+Content-Type: text/html
+Content-Length: 162
+Connection: keep-alive
+Location: https://deixalleria.lagarriga.cat/
+
+port: 443
+HTTP/1.1 400 Bad Request
+Server: nginx
+Date: Thu, 16 Nov 2023 10:02:37 GMT
+Content-Type: text/html
+Content-Length: 248
+Connection: close
+
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+HTTP/1.1 302 Moved Temporarily
+Server: sw-cp-server
+Date: Thu, 16 Nov 2023 10:02:43 GMT
+Content-Type: text/html
+Content-Length: 138
+Connection: close
+Location: https://deixalleria.lagarriga.cat:8443/
+
+port: 4443
+port: 6443
+Domain: deixalleria.lagarriga.cat:185.136.89.140
+
+
+port: 80
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: directori.lagarriga.cat
+
+
+port: 80
+HTTP/1.1 301 Moved Permanently
+Server: nginx-rc
+Date: Thu, 16 Nov 2023 10:02:49 GMT
+Content-Type: text/html; charset=iso-8859-1
+Connection: keep-alive
+Location: https://directori.lagarriga.cat/
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+
+port: 443
+HTTP/1.1 400 Bad Request
+Server: nginx-rc
+Date: Thu, 16 Nov 2023 10:02:49 GMT
+Content-Type: text/html
+Content-Length: 252
+Connection: close
+
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: directori.lagarriga.cat:116.203.101.77
+
+
+port: 80
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: emad.lagarriga.cat
+
+
+port: 80
+HTTP/1.1 301 Moved Permanently
+Date: Thu, 16 Nov 2023 10:03:20 GMT
+Server: Apache
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+X-Redirect-By: WordPress
+Set-Cookie: PHPSESSID=16cdfgc3t1jcrcn53ot016u0h2; path=/
+Upgrade: h2
+Connection: Upgrade
+Location: https://emad.lagarriga.cat/
+Content-Type: text/html; charset=UTF-8
+
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: emad.lagarriga.cat:81.25.125.129
+
+
+port: 80
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: emad.lagarriga.cat:CM2019120213001.dnssw.net
+
+
+port: 80
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: entitats.lagarriga.cat:ppe.entitats.diba.cat
+
+
+port: 80
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: entitats.lagarriga.cat:ppe.entitats.diba.cat.
+
+
+port: 80
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: escolamusica.lagarriga.cat
+
+
+port: 80
+HTTP/1.1 301 Moved Permanently
+Date: Thu, 16 Nov 2023 10:03:50 GMT
+Server: Apache
+X-Redirect-By: WordPress
+Upgrade: h2
+Connection: Upgrade
+Location: http://www.escolamusica.lagarriga.cat/
+Content-Type: text/html; charset=UTF-8
+
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: escolamusica.lagarriga.cat:81.25.125.129
+
+
+port: 80
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: fempoble.lagarriga.cat
+
+
+port: 80
+HTTP/1.1 301 Moved Permanently
+Date: Thu, 16 Nov 2023 10:04:18 GMT
+Server: Apache
+X-Redirect-By: WordPress
+Upgrade: h2
+Connection: Upgrade
+Location: https://fempoble.lagarriga.cat/
+Content-Type: text/html; charset=UTF-8
+
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: fempoble.lagarriga.cat:81.25.125.129
+
+
+port: 80
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: fmauri.entitats.lagarriga.cat:ppe.entitats.diba.cat
+
+
+port: 80
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: fmauri.entitats.lagarriga.cat:ppe.entitats.diba.cat.
+
+
+port: 80
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: formacio.lagarriga.cat
+
+
+port: 80
+HTTP/1.1 301 Moved Permanently
+Server: nginx-rc
+Date: Thu, 16 Nov 2023 10:04:48 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+X-Redirect-By: WordPress
+Location: https://www.canraspall.cat/
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+
+port: 443
+HTTP/1.1 400 Bad Request
+Server: nginx-rc
+Date: Thu, 16 Nov 2023 10:04:48 GMT
+Content-Type: text/html
+Content-Length: 252
+Connection: close
+
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: formacio.lagarriga.cat:157.90.227.31
+
+
+port: 80
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: lescaliues.lagarriga.cat
+
+
+port: 80
+HTTP/1.1 200 OK
+Date: Thu, 16 Nov 2023 10:05:20 GMT
+Server: Apache
+Link: <http://lescaliues.lagarriga.cat/wp-json/>; rel="https://api.w.org/", <http://lescaliues.lagarriga.cat/wp-json/wp/v2/pages/9744>; rel="alternate"; type="application/json", <http://lescaliues.lagarriga.cat/>; rel=shortlink
+Upgrade: h2
+Connection: Upgrade
+Content-Type: text/html; charset=UTF-8
+
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: lescaliues.lagarriga.cat:81.25.125.129
+
+
+port: 80
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: mediambient.lagarriga.cat
+
+
+port: 80
+HTTP/1.1 200 OK
+Date: Thu, 16 Nov 2023 10:05:48 GMT
+Server: Apache
+Upgrade: h2
+Connection: Upgrade
+Last-Modified: Thu, 28 Nov 2013 10:15:14 GMT
+ETag: "34-4ec39fd4fd080"
+Accept-Ranges: bytes
+Content-Length: 52
+Content-Type: text/html
+
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: mediambient.lagarriga.cat:81.25.125.129
+
+
+port: 80
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: meteo.lagarriga.cat
+
+
+port: 80
+HTTP/1.1 403 Forbidden
+Date: Thu, 16 Nov 2023 10:06:16 GMT
+Server: Apache
+Content-Type: text/html; charset=iso-8859-1
+
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: meteo.lagarriga.cat:81.25.125.129
+
+
+port: 80
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: meteo.lagarriga.cat:CM2019120213001.dnssw.net
+
+
+port: 80
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: meteo.lagarriga.cat:CM2019120213001.dnssw.net.
+
+
+port: 80
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: noucdh.lagarriga.cat
+
+
+port: 80
+HTTP/1.1 200 OK
+date: Thu, 16 Nov 2023 10:06:46 GMT
+content-type: text/html; charset=UTF-8
+server: Apache
+x-powered-by: PHP/8.1
+cache-control: max-age=3600, public
+x-drupal-dynamic-cache: MISS
+link: <http://noucdh.lagarriga.cat/node/4196>; rel="canonical"
+link: <http://noucdh.lagarriga.cat/node/4196>; rel="shortlink"
+x-ua-compatible: IE=edge
+content-language: ca
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+permissions-policy: interest-cohort=()
+expires: Sun, 19 Nov 1978 05:00:00 GMT
+last-modified: Wed, 15 Nov 2023 23:53:54 GMT
+etag: "1700092434"
+vary: Cookie,Accept-Encoding
+x-generator: Drupal 9 (https://www.drupal.org)
+x-drupal-cache: HIT
+x-iplb-request-id: 2E1BDA68:9B8E_BCA58191:0050_6555E9B6_3DA4D:2D3D5
+x-iplb-instance: 17102
+
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: noucdh.lagarriga.cat:188.165.129.145
+
+
+port: 80
+port: 443
+port: 8080
+port: 8081
+port: 3080
+port: 8443
+port: 4443
+port: 6443
+Domain: participa.lagarriga.cat
+
+
+port: 80
+HTTP/1.1 301 Moved Permanently
+Server: nginx
+Date: Thu, 16 Nov 2023 10:07:17 GMT
+Content-Type: text/html
+Content-Length: 162
+Connection: keep-alive
+Location: https://participa.lagarriga.cat/
+
+port: 443
+HTTP/1.1 400 Bad Request
+Server: nginx
+Date: Thu, 16 Nov 2023 10:07:17 GMT
+Content-Type: text/html
+Content-Length: 248
+Connection: close
+
+port: 8080
+port: 8081
