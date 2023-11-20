@@ -100,5 +100,20 @@ then
 
 fi
 
+#Asking the user if he wants to webfuzz the given domain:
+
+echo "Do you want to webfuzz $DOMAIN?"
+
+read -p "Y/n: " ISFUZZING
+
+#If the awnser is yes, then the wfuzz command executes:
+
+if [ $ISFUZZING == "Y" ] || [ $ISFUZZING == "y" ]
+then 
+	wfuzz -w /usr/share/wordlists/wfuzz/general/medium.txt --hc 404 http://$DOMAIN/FUZZ -o wfuzz_out.txt
+fi
+
+
+
 
 
