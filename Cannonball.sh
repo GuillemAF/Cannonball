@@ -1,13 +1,39 @@
 #!/bin/bash
 
+
+if [ $1 == "-h" ] || [ $1 == "--help" ]
+then
+	echo -e "Cannonball is used to gather open source intelligence (OSINT) on a domain. All the information that this script gathers, will be downloaded for a later documentation.\n\n Options: \n\n-d	Input domain.\n-f	Input the name of the folder.\n-c	Extract headers with curl\n-w	Webfuzzing with wfuzz"
+	exit
+fi
+
+while getopts ":d:f:c:w:" opt; do
+	case $opt in
+		d)
+			DOMAIN="$OPTARG"
+			echo "Gathering information for $DOMAIN"
+			;;
+		\?)
+			echo "Invalid operation: -$OPTARG" >&2
+			exit 1
+			;;
+		:)
+			echo "Option $OPTARG requires an argument" >&2
+			exit 1
+			;;
+		f)
+			OUTDIR="$OPTARG"
+			echo "Creating directroy: $OPTARG"
+			;;
+		c)
+			HEADERS="Y"
+			;;
+		w)
+			ISFUZZING="Y"
+	esac
+done
+
 cat .title.txt
-
-# User input: domain & directory
-
-read -p "Input a domain: " DOMAIN
-read -p "Input a directory name where the information will be stored: " OUTDIR
-
-sleep 2
 
 #Creating a directory where all the outputs will be stored
 
@@ -15,23 +41,36 @@ mkdir $OUTDIR
 
 cd $OUTDIR
 
-#Running theHarvester and amass
-theHarvester -d $DOMAIN -b all -f TH_out 
+#Running whois
+whois $DOMAIN >> whois.txt
 
-amass enum -d $DOMAIN -nocolor -o AMS_out
+
+#Running theHarvester and amass
+
+echo "Running TheHarvester..."
+theHarvester -d $DOMAIN -b all -f TH_out 1>/dev/null 2>&1
+
+echo -e "theHarvester finished.\n"
+
+echo "Running Amass..."
+amass enum -d $DOMAIN -nocolor -o AMS_out.txt -silent
+
+echo -e "Amass finished.\n"
 
 #Running shcheck and testssl
-../shcheck/shcheck.py -j https://$DOMAIN > SHCH_out
 
-bash ../testssl.sh/testssl.sh --logfile TESTSSL_out $DOMAIN
+echo "Running shcheck..."
+../shcheck/shcheck.py -j https://$DOMAIN > SHCH_out.json 1>/dev/null 2>&1 i
+echo "shcheck finished.\n"
+
+
+echo "Running testssl..."
+bash ../testssl.sh/testssl.sh --logfile TESTSSL_out $DOMAIN 1>/dev/null 2>&1
+echo "testssl finished."
 
 #Collecting headers with theHarvester links:
 
-echo "All the tools worked correctly. Do you want to extract http headers?"
-
-read -p "Y/n: " HEADERS
-
-if [ $HEADERS == "Y" ] || [ $HEADERS == "y" ]
+if [ $HEADERS == "Y" ]
 then
         echo "Domain: $DOMAIN"
         echo "port: 80" >> headers
@@ -100,20 +139,16 @@ then
 
 fi
 
-#Asking the user if he wants to webfuzz the given domain:
 
-echo "Do you want to webfuzz $DOMAIN?"
-
-read -p "Y/n: " ISFUZZING
-
-#If the awnser is yes, then the wfuzz command executes:
+#The wfuzz command executes:
 
 if [ $ISFUZZING == "Y" ] || [ $ISFUZZING == "y" ]
-then 
-	wfuzz -w /usr/share/wordlists/wfuzz/general/medium.txt --hc 404 http://$DOMAIN/FUZZ -o wfuzz_out.txt
+then
+	echo "Running wfuzz..."
+	wfuzz -c -z file,/usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt --hh 1 --hc 404 http://$DOMAIN/FUZZ >> out.txt 1>/dev/null 2>&1	echo "wfuzz finished."
+
+echo "Fuzzing... Please wait..."
 fi
-
-
 
 
 
