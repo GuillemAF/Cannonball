@@ -8,6 +8,9 @@ This program it's a bash script that uses different modules and OSINT tools. At 
 * Shcheck
 * Testssl
 * Wfuzz
+* Curl
+* DnsRecon
+* Whatweb
 
 ## Installation guide
 This tool requires a little bit of a "set up". Here are the instructions:  
@@ -22,6 +25,7 @@ Another thing you have to do to get this program running properly, is to install
 To do this, you will have to run the following commands:  
   
 (Make sure that you are in "Cannonball" directory)  
+  
 
 ```bash
 git clone https://github.com/drwetter/testssl.sh.git
@@ -36,8 +40,8 @@ sudo apt-get install theharvester & sudo apt-get install amass
 Then install wfuzz if you don't have it already. kali linux has it already installed so its a lot easier.
 ```bash
 sudo apt-get install -y wfuzz
-```
-
+```  
+Next if you don't have it, you will need to install Whatweb and DnsRecon.
 That's it. You have succesfully installed Cannonball on your machine.
 
 ## How does it work?

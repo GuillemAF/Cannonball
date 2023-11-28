@@ -48,94 +48,80 @@ whois $DOMAIN >> whois.txt
 #Running theHarvester and amass
 
 echo "Running TheHarvester..."
-theHarvester -d $DOMAIN -b all -f TH_out 1>/dev/null 2>&1
+theHarvester -d $DOMAIN -b all -f TH_out  1>/dev/null 2>&1
 
 echo -e "theHarvester finished.\n"
 
 echo "Running Amass..."
 amass enum -d $DOMAIN -nocolor -o AMS_out.txt -silent
 
-echo -e "Amass finished.\n"
+echo -e  "Amass finished.\n"
 
 #Running shcheck and testssl
 
 echo "Running shcheck..."
 ../shcheck/shcheck.py -j https://$DOMAIN > SHCH_out.json 1>/dev/null 2>&1 i
-echo "shcheck finished.\n"
+echo -e "shcheck finished.\n"
 
 
 echo "Running testssl..."
 bash ../testssl.sh/testssl.sh --logfile TESTSSL_out $DOMAIN 1>/dev/null 2>&1
-echo "testssl finished."
+echo -e "testssl finished.\n"
 
+echo "Running DnsRecon..."
+dnsrecon -d $DOMAIN -j DNS_out.json
+echo -e "DnsRecon finished.\n"
+
+echo "Running WhatWeb..."
+whatweb $DOMAIN --log-json=WW_out.json
+echo -e "WhatWeb finished.\n"i
+
+
+function header_if () {
+
+RESPONSE=$(curl -m 5 --connect-timeout 5 -I "$1:$2")
+
+http_status=$(echo "$RESPONSE" | head -n 1 | cut -d' ' -f2)
+
+if [[ $http_status =~ 2[0-9][0-9] ]] || [[ $http_status =~ 3[0-9][0-9] ]]
+then
+        echo "$RESPONSE" >> headers
+fi
+	
+}
+
+
+
+function header_ports ($DOM) {
+	
+echo -e "\n\n" >> headers
+echo "$DOMAIN"
+$1="$DOMAIN"
+header_if "$1","80"
+header_if "$1","443"
+header_if "$1","8080" 
+header_if "$1","8081"
+header_if "$1","3080" 	
+header_if "$1","8443"
+header_if "$1","4443"
+header_if "$1","6443"
+
+}
 #Collecting headers with theHarvester links:
 
 if [ $HEADERS == "Y" ]
 then
-        echo "Domain: $DOMAIN"
-        echo "port: 80" >> headers
-        curl -m 5 --connect-timeout 5 -I $DOMAIN >> headers
-        echo "port: 443" >> headers
-        curl -m 5 --connect-timeout 5 -I $DOMAIN:443 >> headers
-        echo "port: 8080" >> headers
-        curl -m 5 --connect-timeout 5 -I $DOMAIN:8080 >> headers
-        echo "port: 8081" >> headers
-        curl -m 5 --connect-timeout 5 -I $DOMAIN:8081 >> headers
-        echo "port: 3080" >> headers
-        curl -m 5 --connect-timeout 5 -I $DOMAIN:3080 >> headers
-        echo "port: 8443" >> headers
-        curl -m 5 --connect-timeout 5 -I $DOMAIN:8443 >> headers
-        echo "port: 4443" >> headers
-        curl -m 5 --connect-timeout 5 -I $DOMAIN:4443 >> headers
-        echo "port: 6443" >> headers
-        curl -m 5 --connect-timeout 5 -I $DOMAIN:6443 >> headers
-        echo -e "\n\n"
+	header_ports("$DOMAIN")
 
         for i in $(cat TH_out.json | jq -r '.hosts[]')
         do
-                echo "Domain: $i" >> headers
-                echo -e "\n" >> headers
-                echo "port: 80" >> headers
-                curl -m 5 --connect-timeout 5 -I $i >> headers
-                echo "port: 443" >> headers
-                curl -m 5 --connect-timeout 5 -I $i:443 >> headers
-                echo "port: 8080" >> headers
-                curl -m 5 --connect-timeout 5 -I $i:8080 >> headers
-                echo "port: 8081" >> headers
-                curl -m 5 --connect-timeout 5 -I $i:8081 >> headers
-                echo "port: 3080" >> headers
-                curl -m 5 --connect-timeout 5 -I $i:3080 >> headers
-                echo "port: 8443" >> headers
-                curl -m 5 --connect-timeout 5 -I $i:8443 >> headers
-                echo "port: 4443" >> headers
-                curl -m 5 --connect-timeout 5 -I $i:4443 >> headers
-                echo "port: 6443" >> headers
-                curl -m 5 --connect-timeout 5 -I $i:6443 >> headers
-                echo -e "\n\n"
-        done
+        	header_ports("$i")
+	done
 
         for i in $(cat TH_out.json | jq -r '.ips[]')
         do
-                echo "IP: $i" >> headers
-                echo -e "\n" >> headers
-                echo "port: 80" >> headers
-                curl -m 5 --connect-timeout 5 -I $i >> headers
-                echo "port: 443" >> headers
-                curl -m 5 --connect-timeout 5 -I $i:443 >> headers
-                echo "port: 8080" >> headers
-                curl -m 5 --connect-timeout 5 -I $i:8080 >> headers
-                echo "port: 8081" >> headers
-                curl -m 5 --connect-timeout 5 -I $i:8081 >> headers
-                echo "port: 3080" >> headers
-                curl -m 5 --connect-timeout 5 -I $i:3080 >> headers
-                echo "port: 8443" >> headers
-                curl -m 5 --connect-timeout 5 -I $i:8443 >> headers
-                echo "port: 4443" >> headers
-                curl -m 5 --connect-timeout 5 -I $i:4443 >> headers
-                echo "port: 6443" >> headers
-                curl -m 5 --connect-timeout 5 -I $i:6443 >> headers
-                echo -e "\n\n"
-        done
+        	header_ports("$i")
+	done
 
 fi
 
@@ -149,6 +135,5 @@ then
 
 echo "Fuzzing... Please wait..."
 fi
-
 
 

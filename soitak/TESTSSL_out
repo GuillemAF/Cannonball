@@ -1,9 +1,9 @@
 ## Scan started as: "testssl.sh --logfile TESTSSL_out aktios.com"
-## at MilesDavis:/usr/bin/openssl
-## version testssl: 3.2rc3 cb56d22 from 2023-11-20
-## version openssl: "3.0.11" from "Sep 19 16:58:30 2023")
+## at kali:../testssl.sh/bin/openssl.Linux.x86_64
+## version testssl: 3.2rc3 9f5395e from 2023-11-22
+## version openssl: "1.0.2-bad" from "Sep  1 14:03:44 2022")
 
-[7m Start 2023-11-21 12:53:30                -->> 192.124.249.170:443 (aktios.com) <<--[m
+[7m Start 2023-11-28 06:04:40                -->> 192.124.249.170:443 (aktios.com) <<--[m
 
  rDNS (192.124.249.170): cloudproxy10170.sucuri.net.
  Service detected:       HTTP
@@ -68,33 +68,21 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 
 [1m[4m Testing robust forward secrecy (FS)[m[4m -- omitting Null Authentication/Encryption, 3DES, RC4 [m
 
-[0;32m FS is offered (OK) [m          TLS_AES_256_GCM_SHA384
-                              TLS_CHACHA20_POLY1305_SHA256
-                              ECDHE-RSA-AES256-GCM-SHA384
-                              ECDHE-RSA-AES256-SHA384 ECDHE-RSA-AES256-SHA
-                              ECDHE-RSA-CHACHA20-POLY1305
-                              ECDHE-RSA-CAMELLIA256-SHA384
-                              ECDHE-ARIA256-GCM-SHA384
-                              TLS_AES_128_GCM_SHA256
-                              ECDHE-RSA-AES128-GCM-SHA256
-                              ECDHE-RSA-AES128-SHA256 ECDHE-RSA-AES128-SHA
-                              ECDHE-RSA-CAMELLIA128-SHA256
-                              ECDHE-ARIA128-GCM-SHA256 
+[0;32m FS is offered (OK) [m          TLS_AES_256_GCM_SHA384 TLS_CHACHA20_POLY1305_SHA256 ECDHE-RSA-AES256-GCM-SHA384
+                              ECDHE-RSA-AES256-SHA384 ECDHE-RSA-AES256-SHA ECDHE-RSA-CHACHA20-POLY1305
+                              ECDHE-RSA-CAMELLIA256-SHA384 ECDHE-ARIA256-GCM-SHA384 TLS_AES_128_GCM_SHA256
+                              ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES128-SHA256 ECDHE-RSA-AES128-SHA
+                              ECDHE-RSA-CAMELLIA128-SHA256 ECDHE-ARIA128-GCM-SHA256 
 [1m Elliptic curves offered:     [m[0;32mprime256v1[m [0;32msecp384r1[m [0;32msecp521r1[m [0;32mX25519[m [0;32mX448[m 
-[1m TLS 1.2 sig_algs offered:    [mRSA-PSS-RSAE+SHA256 RSA-PSS-RSAE+SHA384 
-                              RSA-PSS-RSAE+SHA512 RSA+SHA256 RSA+SHA384 
+[1m TLS 1.2 sig_algs offered:    [mRSA-PSS-RSAE+SHA256 RSA-PSS-RSAE+SHA384 RSA-PSS-RSAE+SHA512 RSA+SHA256 RSA+SHA384 
                               RSA+SHA512 RSA+SHA224 [1;33mRSA+SHA1[m 
-[1m TLS 1.3 sig_algs offered:    [mRSA-PSS-RSAE+SHA256 RSA-PSS-RSAE+SHA384 
-                              RSA-PSS-RSAE+SHA512 
+[1m TLS 1.3 sig_algs offered:    [mRSA-PSS-RSAE+SHA256 RSA-PSS-RSAE+SHA384 RSA-PSS-RSAE+SHA512 
 
 [1m[4m Testing server defaults (Server Hello) [m
 
-[1m TLS extensions (standard)    [m"renegotiation info/#65281" "server name/#0"
-                              "EC point formats/#11" "session ticket/#35"
-                              "supported versions/#43" "key share/#51"
-                              "max fragment length/#1"
-                              "application layer protocol negotiation/#16"
-                              "encrypt-then-mac/#22"
+[1m TLS extensions (standard)    [m"renegotiation info/#65281" "server name/#0" "EC point formats/#11" "session ticket/#35"
+                              "supported versions/#43" "key share/#51" "supported_groups/#10" "max fragment length/#1"
+                              "application layer protocol negotiation/#16" "encrypt-then-mac/#22"
                               "extended master secret/#23"
 [1m Session Ticket RFC 5077 hint [m3600 seconds, session tickets keys seems to be rotated < daily
 [1m SSL Session ID support       [myes
@@ -114,7 +102,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 [1m Trust (hostname)             [m[0;32mOk via SAN and CN[m (SNI mandatory)
 [1m Chain of trust[m               [0;32mOk   [m[0;35m[m
 [1m EV cert[m (experimental)       no 
-[1m Certificate Validity (UTC)   [m[0;32m85 >= 60 days[m (2023-02-15 08:07 --> 2024-02-15 08:07)
+[1m Certificate Validity (UTC)   [m[0;32m78 >= 60 days[m (2023-02-15 08:07 --> 2024-02-15 08:07)
 [1m ETS/"eTLS"[m, visibility info  not present
 [1m Certificate Revocation List  [mhttp://crl.starfieldtech.com/sfig2s1-540.crl
 [1m OCSP URI                     [mhttp://ocsp.starfieldtech.com/
@@ -141,11 +129,9 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
                               [0;32mX-Frame-Options[m: SAMEORIGIN
                               [0;33mmisconfiguration: [m[3mX-Content-Type-Options[m[0;33m 2x[m -- checking first one only
                               [0;32mX-Content-Type-Options[m: nosniff
-                              [0;32mContent-Security-Policy[m:
-                                upgrade-insecure-requests;
+                              [0;32mContent-Security-Policy[m: upgrade-insecure-requests;
                               X-XSS-Protection: 1; mode=block
-                              Cache-Control: must-revalidate, no-cache,
-                                private
+                              Cache-Control: must-revalidate, no-cache, private
 [1m Reverse Proxy banner         [m--
 
 
@@ -158,8 +144,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 [1m Secure Renegotiation (RFC 5746)           [m[1;32msupported (OK)[m
 [1m Secure Client-Initiated Renegotiation     [m[0;32mnot vulnerable (OK)[m
 [1m CRIME, TLS [m(CVE-2012-4929)                [0;32mnot vulnerable (OK)[m
-[1m BREACH[m (CVE-2013-3587)                    [0;33mpotentially NOT ok, "gzip deflate compress br" HTTP compression detected.[m - only supplied "/" tested
-                                           Can be ignored for static pages or if no secrets in the page
+[1m BREACH[m (CVE-2013-3587)                    [0;32mno gzip/deflate/compress/br HTTP compression (OK) [m - only supplied "/" tested
 [1m POODLE, SSL[m (CVE-2014-3566)               [1;32mnot vulnerable (OK)[m, no SSLv3 support
 [1m TLS_FALLBACK_SCSV[m (RFC 7507)              [0;32mNo fallback possible (OK)[m, no protocol below TLS 1.2 offered
 [1m SWEET32[m (CVE-2016-2183, CVE-2016-6329)    [1;32mnot vulnerable (OK)[m
@@ -226,6 +211,6 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 [1m Overall Grade                [m[1;32mA[m
 [1m Grade cap reasons            [mGrade capped to A. HSTS is not offered
 
-[7m Done 2023-11-21 12:54:57 [  89s] -->> 192.124.249.170:443 (aktios.com) <<--[m
+[7m Done 2023-11-28 06:06:24 [ 107s] -->> 192.124.249.170:443 (aktios.com) <<--[m
 
 
