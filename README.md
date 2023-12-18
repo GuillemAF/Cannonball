@@ -1,7 +1,7 @@
 # Cannonball
-Cannonball is a pentest tool used for information gathering and OSINT. It's centered in enterprise security where you'll have to document and download what you find in a very structured way. This tool is a cluster of many local and online OSINT softwares created by other users. What I've made it's just put all of those together.  
+Cannonball is a pentest tool used for information gathering and OSINT. It's centered in enterprise security where you'll have to document and download what you find in a very structured way. This tool is a cluster of many local OSINT softwares created by other users. What I've made it's just put all of those together. It consists of a bash script that you execute and input a domain and a folder name and it saves all the information that tools gather in .json format.  
 
-### What modules does Cannonball use?
+## What modules does Cannonball use?
 This program it's a bash script that uses different modules and OSINT tools. At the moment we are using this ones:
 * TheHarvester
 * Amass
@@ -12,7 +12,7 @@ This program it's a bash script that uses different modules and OSINT tools. At 
 * DnsRecon
 * Whatweb
 
-## Installation guide
+### Installation guide
 This tool requires a little bit of a "set up". Here are the instructions:  
 
 To proceed with the installation you'll have to run this command on your bash shell:
@@ -36,6 +36,11 @@ also, you will have to have TheHarvester and Amass isntalled too. You can do thi
 ```bash
 sudo apt-get install theharvester & sudo apt-get install amass
 ```
+Then install jq (jason parser for bash);
+```bash
+sudo apt-get install jq
+```
+
 
 Then install wfuzz if you don't have it already. kali linux has it already installed so its a lot easier.
 ```bash
@@ -44,15 +49,23 @@ sudo apt-get install -y wfuzz
 Next if you don't have it, you will need to install Whatweb and DnsRecon.
 That's it. You have succesfully installed Cannonball on your machine.
 
-## How does it work?
+### How does it work?
 When you have completed the process of installation, you will have to execute: 
 ```bash
-bash Cannonball.sh
+bash Cannonball.sh -h
 ```
-Then a text appears. You'll have to introduce your domain and your directory name and wait. At one point, the script will ask you if you want to extract http headers. Click yes if you want to, no if you don't. Then it will ask if you want to webfuzz the domain. Y for yes N or anything else for no. When the process is finished, you will have a folder with the name that you introduced previousley. Inside you'll find all the output files ready to be documented.  
-This way you can have as many directories as you want containing the domains that you want. 
+When you do that then, a text appears. This text is like a man page that theaches you the diferent parameters that can be used in the script.
+At the moment only the following parameters exist:
+    -   d       Input domain.
+    -   f       Input the name of the folder.
+    -   c       Extract headers with curl of all the subdomains gathered by theHarvester and amass.
+    -   w       Webfuzzing with wfuzz.
+    -   e       Exctract encryption information about all the subdomains gathered by theHarvester and amass.
 
-## Credits:
+When the process is finished, you will have a folder with the name that you introduced previousley. Inside you'll find all the output files ready to be documented.  
+This way you can have as many directories as you want containing the domains that you inpted.
+
+### Credits:
 Created by: Guillem Agulló
 Aktios security SL.
 
