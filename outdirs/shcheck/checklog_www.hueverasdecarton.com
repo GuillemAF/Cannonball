@@ -1,0 +1,1 @@
+{"https://www.hueverasdecarton.com": {"present": {}, "missing": ["X-Frame-Options", "X-Content-Type-Options", "Strict-Transport-Security", "Content-Security-Policy", "Referrer-Policy", "Permissions-Policy", "Cross-Origin-Embedder-Policy", "Cross-Origin-Resource-Policy", "Cross-Origin-Opener-Policy"]}}

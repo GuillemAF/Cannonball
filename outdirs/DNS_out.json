@@ -1,0 +1,103 @@
+[
+    {
+        "arguments": "/usr/bin/dnsrecon -d hueverasdecarton.com -j DNS_out.json",
+        "date": "2024-01-23 03:31:01.028419",
+        "type": "ScanInfo"
+    },
+    {
+        "address": "173.245.58.72",
+        "domain": "hueverasdecarton.com",
+        "mname": "athena.ns.cloudflare.com",
+        "type": "SOA"
+    },
+    {
+        "address": "108.162.192.72",
+        "domain": "hueverasdecarton.com",
+        "mname": "athena.ns.cloudflare.com",
+        "type": "SOA"
+    },
+    {
+        "address": "172.64.32.72",
+        "domain": "hueverasdecarton.com",
+        "mname": "athena.ns.cloudflare.com",
+        "type": "SOA"
+    },
+    {
+        "Version": "\"dnsmasq-2.78\"",
+        "address": "172.64.32.72",
+        "domain": "hueverasdecarton.com",
+        "recursive": "True",
+        "target": "athena.ns.cloudflare.com",
+        "type": "NS"
+    },
+    {
+        "Version": "\"dnsmasq-2.78\"",
+        "address": "173.245.58.72",
+        "domain": "hueverasdecarton.com",
+        "recursive": "True",
+        "target": "athena.ns.cloudflare.com",
+        "type": "NS"
+    },
+    {
+        "Version": "\"dnsmasq-2.78\"",
+        "address": "108.162.192.72",
+        "domain": "hueverasdecarton.com",
+        "recursive": "True",
+        "target": "athena.ns.cloudflare.com",
+        "type": "NS"
+    },
+    {
+        "Version": "\"dnsmasq-2.78\"",
+        "address": "173.245.59.189",
+        "domain": "hueverasdecarton.com",
+        "recursive": "True",
+        "target": "kanye.ns.cloudflare.com",
+        "type": "NS"
+    },
+    {
+        "Version": "\"dnsmasq-2.78\"",
+        "address": "172.64.33.189",
+        "domain": "hueverasdecarton.com",
+        "recursive": "True",
+        "target": "kanye.ns.cloudflare.com",
+        "type": "NS"
+    },
+    {
+        "Version": "\"dnsmasq-2.78\"",
+        "address": "108.162.193.189",
+        "domain": "hueverasdecarton.com",
+        "recursive": "True",
+        "target": "kanye.ns.cloudflare.com",
+        "type": "NS"
+    },
+    {
+        "address": "81.169.145.98",
+        "domain": "hueverasdecarton.com",
+        "exchange": "smtp.rzone.de",
+        "type": "MX"
+    },
+    {
+        "address": "188.114.97.5",
+        "domain": "hueverasdecarton.com",
+        "name": "hueverasdecarton.com",
+        "type": "A"
+    },
+    {
+        "address": "188.114.96.5",
+        "domain": "hueverasdecarton.com",
+        "name": "hueverasdecarton.com",
+        "type": "A"
+    },
+    {
+        "domain": "hueverasdecarton.com",
+        "name": "hueverasdecarton.com",
+        "strings": "v=spf1 include:_spf.strato.com ~all",
+        "type": "TXT"
+    },
+    {
+        "domain": "hueverasdecarton.com",
+        "name": "hueverasdecarton.com",
+        "strings": "zone-ownership-verification-7b8cbe94efed54d2f4e2fab61a092f19811dd776f2613eb3904f74ab54ccc0e7",
+        "type": "TXT"
+    }
+]
