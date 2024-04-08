@@ -1,0 +1,4 @@
+Después de realizar un análisis de la exposición de <la empresa> a través de la búsqueda de
+fuentes abiertas, se considera que el nivel de exposición es <muy bajo|bajo|medio|alto|muy
+alto|crítico.
+

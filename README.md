@@ -11,6 +11,7 @@ This program it's a bash script that uses different modules and OSINT tools. At 
 * Curl
 * DnsRecon
 * Whatweb
+* Spiderfoot
 
 ### Installation guide
 This tool requires a little bit of a "set up". Here are the instructions:  
@@ -40,9 +41,10 @@ Then install jq (jason parser for bash);
 ```bash
 sudo apt-get install jq
 ```
+You will have to install spiderfoot also.
 
 
-Then install wfuzz if you don't have it already. kali linux has it already installed so its a lot easier.
+Then install wfuzz if you don't have it already. kali linux has it already installed so it's a lot easier.
 ```bash
 sudo apt-get install -y wfuzz
 ```  
@@ -50,7 +52,7 @@ Next if you don't have it, you will need to install Whatweb and DnsRecon.
 That's it. You have succesfully installed Cannonball on your machine.
 
 ### How does it work?
-When you have completed the process of installation, you will have to execute: 
+Once you've completed the process of installation, you will have to execute: 
 ```bash
 bash Cannonball.sh -h
 ```
@@ -63,7 +65,7 @@ At the moment only the following parameters exist:
     -   e       Exctract encryption information about all the subdomains gathered by theHarvester and amass.
 
 When the process is finished, you will have a folder with the name that you introduced previousley. Inside you'll find all the output files ready to be documented.  
-This way you can have as many directories as you want containing the domains that you inpted.
+This way you can have as many directories as you want containing the domains that you entered.
 
 ### Credits:
 Created by: Guillem Agulló
